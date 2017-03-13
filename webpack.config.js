@@ -25,21 +25,19 @@ module.exports = {
         ascii_only: true
       }
     }),
-    new ExtractTextPlugin("./app/css/style.css", {
-      allChunks: true
-    })
+    new ExtractTextPlugin({ filename: "./app/css/style.css", allChunks: true })
   ],
   module: {
-    preLoaders: [
-      { test: /\.json$/, loader: 'json'},
+    rules: [
+      { enforce: 'pre', test: /\.json$/, loader: 'json-loader' },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" }) }
     ],
     loaders: [
-      { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")//loader: "style!css"
-      }
+      { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" }) }
     ]
   },
   resolve: {
-    modulesDirectories: ["node_modules"],
+    modules: ["node_modules"],
     alias: {
       hightlightjs: "highlight.js/lib/highlight.js",
       markdownit: "markdown-it/index.js",
