@@ -16,15 +16,15 @@
   "author": "Damian Baćkowski",
   "license": "MIT",
   "devDependencies": {
-    "codemirror": "^5.25.2",
-    "css-loader": "^0.28.0",
+    "codemirror": "^5.26.0",
+    "css-loader": "^0.28.3",
     "electron-packager": "8.7.0",
-    "electron": "1.6.8",
+    "electron": "1.6.10",
     "extract-text-webpack-plugin": "^2.1.0",
     "highlight.js": "^9.11.0",
     "json-loader": "^0.5.4",
     "markdown-it": "^8.3.1",
-    "style-loader": "^0.17.0",
-    "webpack": "2.5.1"
+    "style-loader": "^0.18.1",
+    "webpack": "2.6.1"
   }
 }
