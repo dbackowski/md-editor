@@ -6,12 +6,12 @@ Simple markdown editor in electron.
 
 ## Usage
 
-    npm install
-    npm start
+    yarn
+    yarn start
 
 To create standalone packages for Linux (x64) and Mac OS X (x64):
 
-    npm run-script build
+    yarn run build
 
 Standalone packages for Linux (x64) and Mac OS X (x64): 
 https://github.com/dbackowski/md-editor/releases
