@@ -18,13 +18,13 @@
   "devDependencies": {
     "codemirror": "^5.26.0",
     "css-loader": "^0.28.3",
-    "electron-packager": "8.7.0",
     "electron": "1.6.10",
-    "extract-text-webpack-plugin": "^2.1.0",
+    "electron-packager": "^8.7.1",
+    "extract-text-webpack-plugin": "^2.1.2",
     "highlight.js": "^9.11.0",
     "json-loader": "^0.5.4",
     "markdown-it": "^8.3.1",
-    "style-loader": "^0.18.1",
+    "style-loader": "^0.18.2",
     "webpack": "2.6.1"
   }
 }
