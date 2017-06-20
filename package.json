@@ -25,6 +25,6 @@
     "json-loader": "^0.5.4",
     "markdown-it": "^8.3.1",
     "style-loader": "^0.18.2",
-    "webpack": "2.6.1"
+    "webpack": "^3.0.0"
   }
 }
