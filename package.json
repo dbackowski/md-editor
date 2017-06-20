@@ -18,7 +18,7 @@
   "devDependencies": {
     "codemirror": "^5.26.0",
     "css-loader": "^0.28.3",
-    "electron": "1.6.10",
+    "electron": "^1.6.11",
     "electron-packager": "^8.7.1",
     "extract-text-webpack-plugin": "^2.1.2",
     "highlight.js": "^9.11.0",
