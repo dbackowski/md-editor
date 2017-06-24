@@ -16,7 +16,7 @@
   "author": "Damian Baćkowski",
   "license": "MIT",
   "devDependencies": {
-    "codemirror": "^5.26.0",
+    "codemirror": "^5.27.2",
     "css-loader": "^0.28.3",
     "electron": "^1.6.11",
     "electron-packager": "^8.7.1",
