@@ -1,43 +1,39 @@
-var webpack = require("webpack");
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require('path');
+const webpack = require('webpack');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+  target: "electron-main",
+  mode: "production",
   entry: "./src/entry.js",
   output: {
     path: __dirname,
     filename: "app/js/bundle.js"
   },
-  "target": "atom",
+  performance: {
+    hints: false
+  },
   plugins: [
     new webpack.ProvidePlugin({
       hljs: "hightlightjs",
       markdownit: "markdownit",
       CodeMirror: "codemirrorjs"
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      mangle: false,
-      minimize: true,
-      sourceMap: false,
-      compress: {
-        warnings: false,
-      },
-      output: {
-        ascii_only: true
-      }
-    }),
-    new ExtractTextPlugin({ filename: "./app/css/style.css", allChunks: true })
   ],
-  module: {
-    rules: [
-      { enforce: 'pre', test: /\.json$/, loader: 'json-loader' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" }) }
-    ],
-    loaders: [
-      { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" }) }
+  optimization: {
+    minimizer: [
+      new UglifyJSPlugin({
+        uglifyOptions: {
+          output: {
+            ascii_only: true
+          }
+        }
+      }),
     ]
   },
   resolve: {
     modules: ["node_modules"],
+    extensions: ['.js', '.css'],
     alias: {
       hightlightjs: "highlight.js/lib/highlight.js",
       markdownit: "markdown-it/index.js",
@@ -47,5 +43,19 @@ module.exports = {
       codemirrorjs_gfm: "codemirror/mode/gfm/gfm.js",
       codemirrorjs_markdown: "codemirror/mode/markdown/markdown.js"
     }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: [
+          path.resolve('node_modules'),
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      }
+    ]
   }
-}
+};
