@@ -1,6 +1,7 @@
 node_modules
 bower_components
 npm-debug.log
+yarn-error.log
 MdEditor-darwin-x64
 MdEditor-linux-x64
 app/css/style.css
