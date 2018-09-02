@@ -23,7 +23,7 @@
     "highlight.js": "^9.11.0",
     "json-loader": "^0.5.7",
     "markdown-it": "^8.4.0",
-    "style-loader": "^0.22.0",
+    "style-loader": "^0.23.0",
     "webpack": "^4.5.0",
     "webpack-cli": "^3.0.3"
   }
