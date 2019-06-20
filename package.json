@@ -1,6 +1,6 @@
 {
   "name": "MdEditor",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple markdown editor",
   "main": "main.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "codemirror": "^5.29.0",
-    "css-loader": "^2.1.0",
+    "css-loader": "^3.0.0",
     "electron": "~5.0.0",
     "electron-packager": "^13.0.0",
     "highlight.js": "^9.11.0",
